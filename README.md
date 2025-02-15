@@ -1,5 +1,5 @@
 <h1>화봉고등학교 구조도</h1>
-<h3><b>BackEnd : node.js / FrontEnd : CSS, HTML / Server : OCI</b></h3>
+<h3><b>BackEnd : node.js / FrontEnd : JavaScript, CSS, HTML / Server : OCI</b></h3>
 <h2 style="border-bottom: 1px solid #d8dee4;">environment</h2>
 <p>
   <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"> 
