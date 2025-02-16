@@ -3,34 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>화봉고등학교 구조도</title>
+    <title>화봉고등학교 정보 서비스</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-
-    <h1>
-        <img src="static/images/logo.jpg" alt="logo" style="height: 60px; vertical-align: middle; margin-right: 5px;">
-        교내 구조
-    </h1>
-
-    <div>
-        <label for="floor-select">층 선택:</label>
-        <select id="floor-select">
-            <option value="1">1층</option>
-            <option value="2">2층</option>
-            <option value="3">3층</option>
-            <option value="4">4층</option>
-        </select>
+    <div class="container">
+        <h1>화봉고 정보 서비스</h1>
+        <a href="/map" class="btn map-btn">교내 구조 정보</a>
+        <a href="/meal" class="btn meal-btn">학교 급식 정보</a>
     </div>
-
-    <br/>
-
-    <div id="map-container">
-        <object id="floor-map" type="image/svg+xml" width="600" height="400"></object>
-    </div>
-
-    <!-- JS 파일 불러오기 -->
-    <script src="script.js"></script>
-
 </body>
 </html>

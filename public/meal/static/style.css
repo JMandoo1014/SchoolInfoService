@@ -1,0 +1,117 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f0f0f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background: #3caaff;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: #2f88cc;
+}
+
+button:active {
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+#meal-container {
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.meal-item {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.meal-item h3 {
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .meal-item {
+        padding: 12px;
+    }
+}
+
+/* 작은 모바일 화면에 대한 추가 최적화 */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .meal-item h3 {
+        font-size: 16px;
+    }
+
+    .meal-item p {
+        font-size: 14px;
+    }
+}
