@@ -1,4 +1,5 @@
-<h1>화봉고등학교 구조도</h1>
+<h1>화봉고등학교 통합 정보 시스템</h1>
+<h3><b>급식정보(나이스 open api) & 교내 구조도</b></h3>
 <h3><b>BackEnd : node.js / FrontEnd : JavaScript, CSS, HTML / Server : OCI</b></h3>
 <h2 style="border-bottom: 1px solid #d8dee4;">environment</h2>
 <p>
