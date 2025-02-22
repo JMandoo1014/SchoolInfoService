@@ -23,10 +23,10 @@ const formatDate = (date) => date.toISOString().split('T')[0].replace(/-/g, '');
 app.get('/api/meal', async (req, res) => {
     const { type } = req.query;
     const today = new Date();
-    let url = `${BASE_URL}?Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=${OFFICE_CODE}&SD_SCHUL_CODE=${SCHOOL_CODE}&KEY=${API_KEY}`;
+    let url = `${BASE_URL}?Type=json&ATPT_OFCDC_SC_CODE=${OFFICE_CODE}&SD_SCHUL_CODE=${SCHOOL_CODE}&KEY=${API_KEY}`;
 
-    if (type === 'today') { //${formatDate(today)}
-        url += `&MLSV_YMD=20241231`;
+    if (type === 'today') {
+        url += `&MLSV_YMD=${formatDate(today)}`;
     } else if (type === 'week') {
         let start = new Date();
         start.setDate(today.getDate() - today.getDay());
@@ -39,6 +39,12 @@ app.get('/api/meal', async (req, res) => {
 
     try {
         const response = await fetch(url);
+        console.log("Response Status:", response.status); // 응답 상태 확인
+
+        if (response.status === 301 || response.status === 302) {
+            const redirectUrl = response.headers.get("location");
+            console.log("Redirecting to:", redirectUrl);
+        }
         const data = await response.json();
         res.json(data);
     } catch (error) {

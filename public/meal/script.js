@@ -19,15 +19,17 @@ function displayMeal(data) {
     }
 
     const meals = data.mealServiceDietInfo[1].row;
-    meals.forEach(meal => {
+    const mealItems = meals.map(meal => {
         const mealDiv = document.createElement("div");
         mealDiv.classList.add("meal-item");
         mealDiv.innerHTML = `
             <h3>${meal.MLSV_YMD}</h3>
             <p>${meal.DDISH_NM.replace(/\([^\)]*\)/g, '')}</p>
         `;
-        container.appendChild(mealDiv);
+        return mealDiv;
     });
+
+    mealItems.forEach(item => container.appendChild(item));
 }
 
 // 오늘 급식 불러오기 (페이지 로드 시 자동 실행)
